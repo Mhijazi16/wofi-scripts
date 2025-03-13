@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 
 
 declare -A services 
@@ -10,7 +10,7 @@ services["💶 Frontend"]="/home/ka1ser/coldrelay/Frontend/"
 
 SELECTED=$(printf "%s\n" "${!services[@]}" | wofi -n -d -p "Search > ")
 
-cd "$services["$SELECTED"]"
+cd "${services[$SELECTED]}"
 if [[ "$SELECTED" == "💶 Frontend" ]]; then
    kitty npm run dev
 else
