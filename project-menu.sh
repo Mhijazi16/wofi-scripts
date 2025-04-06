@@ -7,6 +7,8 @@ projects["🫐 Hyprland Dotfiles"]="/home/ka1ser/.config/hypr/default/"
 projects["🌵 Wofi Scripts"]="/home/ka1ser/.config/wofi/scripts/"
 projects["🌋 Neovim Configs"]="/home/ka1ser/.config/nvim/"
 projects["🐫 Open Postgres"]="docker ps | grep \"postgres \" | awk '{print \$NF}'"
+projects["👺 ColdRelay ENV"]="neovide /home/ka1ser/coldrelay/core_service/.env"
+projects["👺 Infra ENV"]="neovide /home/ka1ser/coldrelay/infra_service/.env"
 
 project=$(printf "%s\n" "${!projects[@]}" | wofi -n -d -p "Search > ")
 
@@ -16,6 +18,8 @@ if [[ -n "$path" ]]; then
     postgres
     container_name=$(eval "${projects["$project"]}")
     kitty docker exec -it "$container_name" psql -U postgres
+  elif [[ "$project" == *"ENV"* ]]; then
+    eval "${projects["$project"]}"
   else
     source /home/ka1ser/global/bin/activate
     cd "$path" && nohup neovide . &
