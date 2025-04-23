@@ -8,9 +8,13 @@ projects["🫐 Hyprland Dotfiles"]="/home/ka1ser/.config/hypr/default/"
 projects["🌵 Wofi Scripts"]="/home/ka1ser/.config/wofi/scripts/"
 projects["🌋 Neovim Configs"]="/home/ka1ser/.config/nvim/"
 projects["🐫 Open Postgres"]="docker ps | grep \"postgres \" | awk '{print \$NF}'"
+projects["⛈️ Problem Solving "]="/home/ka1ser/Problem-Solving/"
+projects["🧪 Search Simulator"]="/home/ka1ser/Search-Simulator/"
+projects["🥷 User Management"]="/home/ka1ser/coldrelay/user_management_service/"
 projects["👺 ColdRelay ENV"]="neovide /home/ka1ser/coldrelay/core_service/.env"
 projects["👺 Infra ENV"]="neovide /home/ka1ser/coldrelay/infra_service/.env"
 projects["👺 Subscription ENV"]="neovide /home/ka1ser/coldrelay/subscription_management_service/.env"
+projects["👺 User Management ENV"]="neovide /home/ka1ser/coldrelay/user_management_service/.env"
 
 project=$(printf "%s\n" "${!projects[@]}" | wofi -n -d -p "Search > ")
 
@@ -27,6 +31,7 @@ if [[ -n "$path" ]]; then
   else
     source /home/ka1ser/global/bin/activate
     cd "$path" && nohup neovide . &
+    # cd "$path" && kitty nvim .
     disown && exit
   fi
 fi
