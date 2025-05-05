@@ -2,6 +2,7 @@
 
 declare -A projects
 projects["🧊 ColdRelay Core"]="/home/ka1ser/coldrelay/core_service/"
+projects["🧿 Coldrealy Frontend"]="/home/ka1ser/coldrelay/Frontend/"
 projects["💰 Subscription Service"]="/home/ka1ser/coldrelay/subscription_management_service//"
 projects["🥝 Infra Deployer"]="/home/ka1ser/coldrelay/infra_service/"
 projects["🫐 Hyprland Dotfiles"]="/home/ka1ser/.config/hypr/default/"
