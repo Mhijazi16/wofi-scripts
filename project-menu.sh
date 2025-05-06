@@ -22,11 +22,16 @@ project=$(printf "%s\n" "${!projects[@]}" | wofi -n -d -p "Search > ")
 path=("${projects[$project]}")
 if [[ -n "$path" ]]; then
   if [[ "$project" == "🐫 Open Postgres" ]]; then
-    docker run -p 5432:5432 -e POSTGRES_PASSWORD=secret \
-      -v postgres_data:/var/lib/postgresql/data \
-      -d postgres
-    container_name=$(eval "${projects["$project"]}")
-    kitty docker exec -it "$container_name" psql -U postgres
+
+    # only first time 
+    # docker run --name coldrelay -p 5432:5432 -e POSTGRES_PASSWORD=secret \
+    #   -v postgres_data:/var/lib/postgresql/data \
+    #   -d postgres
+    # container_name=$(eval "${projects["$project"]}")
+  
+    docker start coldrelay
+    container_name="coldrelay"
+    kitty docker exec -it "$container_name" psql -U postgres -d coldrelay
   elif [[ "$project" == *"ENV"* ]]; then
     eval "${projects["$project"]}"
   else
