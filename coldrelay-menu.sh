@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 declare -A services 
 
 services["💴 Core Service"]="/home/ka1ser/coldrelay/core_service/"
@@ -10,9 +9,11 @@ services["💶 Frontend"]="/home/ka1ser/coldrelay/Frontend/"
 
 SELECTED=$(printf "%s\n" "${!services[@]}" | wofi -n -d -p "Search > ")
 
-cd "${services[$SELECTED]}"
+[[ -z "$SELECTED" ]] && exit 1
+
+cd "${services["$SELECTED"]}"
 if [[ "$SELECTED" == "💶 Frontend" ]]; then
    kitty npm run dev
 else
-  kitty python server.py
+  kitty 
 fi
