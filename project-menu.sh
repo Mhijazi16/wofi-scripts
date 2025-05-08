@@ -1,6 +1,7 @@
 #!/bin/bash
 
 declare -A projects
+projects["🛰️ Terminal kit"]="/home/ka1ser/github/terminal-kit/"
 projects["🧊 ColdRelay Core"]="/home/ka1ser/coldrelay/core_service/"
 projects["🧿 Coldrealy Frontend"]="/home/ka1ser/coldrelay/Frontend/"
 projects["💰 Subscription Service"]="/home/ka1ser/coldrelay/subscription_management_service//"
