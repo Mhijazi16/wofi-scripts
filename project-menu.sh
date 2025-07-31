@@ -1,6 +1,9 @@
 #!/bin/bash
 
 declare -A projects
+projects["🐍 python demo"]="/home/ka1ser/testing/python/"
+projects["📻 cpp demo"]="/home/ka1ser/testing/cpp/"
+projects["🧴 WebRTC Bot"]="/home/ka1ser/revenu/webrtc/"
 projects["🛰️ Terminal kit"]="/home/ka1ser/github/terminal-kit/"
 projects["🐙 Kraken"]="/home/ka1ser/github/Kraken/"
 projects["🦏 RSS Agregator"]="/home/ka1ser/github/Go-RSS"
