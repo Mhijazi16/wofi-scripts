@@ -2,7 +2,10 @@
 
 declare -A projects
 projects["🛰️ Terminal kit"]="/home/ka1ser/github/terminal-kit/"
+projects["🐙 Kraken"]="/home/ka1ser/github/Kraken/"
+projects["🦏 RSS Agregator"]="/home/ka1ser/github/Go-RSS"
 projects["🧊 ColdRelay Core"]="/home/ka1ser/coldrelay/core_service/"
+projects["🪬 GoLang"]="/home/ka1ser/github/GoLang/"
 projects["🧿 Coldrealy Frontend"]="/home/ka1ser/coldrelay/Frontend/"
 projects["💰 Subscription Service"]="/home/ka1ser/coldrelay/subscription_management_service//"
 projects["🥝 Infra Deployer"]="/home/ka1ser/coldrelay/infra_service/"
