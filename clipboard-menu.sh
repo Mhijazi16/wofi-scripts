@@ -22,7 +22,7 @@ fi
 
 # File to store clipboard history
 CLIP_HISTORY="$HOME/.cache/clipboard_history"
-MAX_HISTORY=50  # Maximum number of history entries to keep
+MAX_HISTORY=500  # Maximum number of history entries to keep
 
 # Ensure the history file and its directory exist
 mkdir -p "$(dirname "$CLIP_HISTORY")"
